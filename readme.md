@@ -22,9 +22,13 @@ TMDB의 데이터를 기반으로 한국뿐만 아니라 전세계의 TV 시리�
 
 TMDB에서 2022년 2월 25일까지의 tv시리즈와 영화 데이터 중 popularity 기준 상위 200개 추출 후 로컬 DB에 저장하여 사용
 
-#### 2-2. TMDB의 검색 api를 사용하여 검색 결과 수집
+👉메인페이지 인기영화/시리즈 목록 표출에 사용
 
+#### 2-2. TMDB 검색 api
 
+DB에 없는 영화/시리즈는 TMDB 검색 api를 사용하여 수집
+
+TMDB의 검색 api로 검색된 영화/시리즈의 데이터를 DB에 저장하여 사용
 
 ## 03. Tools
 
@@ -33,8 +37,6 @@ TMDB에서 2022년 2월 25일까지의 tv시리즈와 영화 데이터 중 popul
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 [TMDB API](https://www.themoviedb.org/?language=ko)
-
-
 
 ## 04. File Introduction
 
