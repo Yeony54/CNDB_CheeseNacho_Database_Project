@@ -6,6 +6,8 @@
 
 기간 : `2022/02/22`~`2022/03/14`
 
+![image-4](./img/4.gif)
+
 ## 01. Purpose
 
 IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이트를 구현
@@ -14,7 +16,17 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 
 
 
-## 02. Tools
+## 02. Data
+
+#### 2-1. 로컬 DB
+
+TMDB에서 2022년 2월 25일까지의 tv시리즈와 영화 데이터 중 popularity 기준 상위 200개 추출 후 로컬 DB에 저장하여 사용
+
+#### 2-2. TMDB의 검색 api를 사용하여 검색 결과 수집
+
+
+
+## 03. Tools
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 
@@ -24,7 +36,7 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 
 
 
-## 03. File Introduction
+## 04. File Introduction
 
 **폴더 내용 소개**
 
@@ -44,6 +56,10 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 │   └── templates	# userpage, login page 등
 └── templates		# base.html, navbar.html
 ```
+
+
+
+## 05. Models
 
 **models 소개**
 
@@ -70,14 +86,15 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 | mc_movie (F)   | sc_series (F)  |               |               |
 | mc_date        | sc_date        |               |               |
 
-## 04. Function
+## 06. Function
 
 #### A. 주요 기능
 
 1. API 활용 영화 순위, 세부 내용 제공
-2. 회원가입 및 인증 후 별점, 리뷰 등록 등 댓글 기능 구현
-3. 사용자 별 선호 장르를 참고한 영화 추천
-4. 영화제목 검색 기능 (API)
+2. 회원가입 및 회원정보 변경 기능 구현
+3. 회윈 인증 후 별점, 리뷰 등록 등 댓글 기능 구현
+4. 사용자 별 선호 장르를 참고한 영화(시리즈) 추천
+5. 영화/시리즈 제목 검색 기능 (API) 구현
 
 #### B. 세부기능
 
@@ -115,8 +132,9 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 - 영화(시리즈)의 제목, 포스터를 클릭하면 영화의 세부 사항을 출력
 - 영화(시리즈) 좋아요 기능 (로그인 시 활성화)
 - 영화(시리즈)의 리뷰, 별점 등록/수정/삭제 기능 (로그인 시 활성화)
-- 별점을 통계내어 각 영화(시리즈)의 평균 별점을 보여줌
-- 로그인한 회원의 리뷰와 다른 회원들의 리뷰를 구분해서 보여줌(모든 리뷰를 볼 때는 로그인한 회원의 리뷰가 가장 위에 오도록 구현)
+- 별점을 통계내어 각 영화(시리즈)의 평균 별점 표시
+- 로그인한 회원의 리뷰와 다른 회원들의 리뷰를 구분해서 표시
+  (모든 리뷰를 볼 때는 로그인한 회원의 리뷰가 가장 위에 오도록 구현)
 
 **mypage** (로그인 시 활성화)
 
@@ -126,5 +144,77 @@ IMDB 라는 해외 Media 포털사이트를 닮은 한국식 Media 포털 사이
 - my preference : 최초 회원가입 시 선호 장르 선택, 이후 업데이트 가능
 - change password : 사용자에게 변경할 비밀번호 입력받은 후 유효성 검증 실행
 
-## 05. 구동화면
+## 07. Demo
+
+#### 6-1. import data
+
+![image-1](./img/1.gif)
+
+#### 6-2. sign up
+
+![image-2](./img/2.gif)
+
+#### 6-3. 선호장르 선택
+
+![image-3](./img/3.gif)
+
+#### 6-4. 로그아웃 후 검색 - 디테일 페이지 접속 (리뷰입력 폼 비활성화)
+
+![image-4](./img/4.gif)
+
+#### 6-5. 로그인 오류 화면
+
+![image-5](./img/5.gif)
+
+#### 6-6. 로그인 상태에서 제목검색, 디테일 페이지 접속
+
+![image-6](./img/6.gif)
+
+#### 6-7. 디테일 페이지에서 리뷰 작성 후 리뷰 확인
+
+![image-7](./img/7.gif)
+
+#### 6-8. 좋아요 등록
+
+![image-8](./img/8.gif)
+
+#### 6-9. 마이페이지에서 좋아요 목록 확인
+
+![image-9](./img/9.gif)
+
+#### 6-10. 좋아요 등록한 미디어에 대한 리뷰 작성
+
+![image-10](./img/10.gif)
+
+#### 6-11. ratings에서 작성한 리뷰 확인
+
+![image-11](./img/11.gif)
+
+#### 6-12. 회원 정보 변경
+
+##### a. 프로필 사진 변경
+
+![image-12-1](./img/12-1.gif)
+
+##### b. 프로필 정보 변경
+
+![image-12-2](./img/12-2.gif)
+
+##### c. 비밀번호 변경
+
+![image-12-3](./img/12-3.gif)
+
+#### 6-13. 선호장르 업데이트 시 변경되는 추천 미디어 목록 (ex.adventure => horror)
+
+##### a. adventure
+
+![image-13-1](./img/13-1.gif)
+
+##### b. horror
+
+![image-13-2](./img/13-2.gif)
+
+#### 6-14. 메인화면 탭
+
+![image-14](./img/14.gif)
 
